@@ -12,7 +12,7 @@ public class BotMovement3 : MonoBehaviour
     {
         // Получение компонента агента
         UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        // Указаие точки назначения
+        // Указание точки назначения
         agent.destination = goal.position;
     }
 
