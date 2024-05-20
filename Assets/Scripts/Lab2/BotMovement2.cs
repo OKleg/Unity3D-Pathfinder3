@@ -20,7 +20,7 @@ public class BotMovement2 : MonoBehaviour
 
     void Start()
     {
-        MoveToLocation(goal2.position);
+        WalkToTarget(goal2.position);
     }
 
     private void Update()
@@ -31,7 +31,7 @@ public class BotMovement2 : MonoBehaviour
             if (Physics.Raycast(ray, out var hit))
             {
                 // agent.SetDestination(hit.point);
-                MoveToLocation(hit.point);
+                WalkToTarget(hit.point);
             }
         }
     }
@@ -56,7 +56,7 @@ public class BotMovement2 : MonoBehaviour
         walking = null;
     }
 
-    void MoveToLocation(Vector3 target)
+    void WalkToTarget(Vector3 target)
     {
         var owner = agent.navMeshOwner as Component;
         owner.TryGetComponent(out NavArea ownerArea);
